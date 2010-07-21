@@ -1,0 +1,1 @@
+file:/C:/SoftwareDevelopment/Databinding%20Workspace/com.iks.hto.karteikastensystem.core.model.tests/data/karteikastenSystem.xml

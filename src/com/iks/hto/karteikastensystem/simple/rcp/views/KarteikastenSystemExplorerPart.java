@@ -80,6 +80,8 @@ public class KarteikastenSystemExplorerPart {
 		this.site = site;
 
 		viewer = init(parent, karteikastensystem);
+		
+		site.setSelectionProvider(viewer);
 	}
 
 	private TreeViewer init(Composite parent,
@@ -102,7 +104,6 @@ public class KarteikastenSystemExplorerPart {
 
 		site.registerContextMenu(Activator.PLUGIN_ID
 				+ ".karteikastenSystemAdditions", mgr, viewer);
-		site.setSelectionProvider(viewer);
 
 		IObservableValue treeObs = ViewerProperties.singleSelection().observe(
 				viewer);
@@ -137,8 +138,6 @@ public class KarteikastenSystemExplorerPart {
 			}
 		});
 
-		this.site.setSelectionProvider(viewer);
-		
 		return viewer;
 	}
 

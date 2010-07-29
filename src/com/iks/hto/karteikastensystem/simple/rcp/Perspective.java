@@ -13,14 +13,9 @@ public class Perspective implements IPerspectiveFactory {
 		String editorArea = layout.getEditorArea();
 		layout.setEditorAreaVisible(false);
 
-//		layout.setFixed(true);
-		System.out.println("in createInitialLayout");
 		layout.addStandaloneView(KarteikastenSystemViewPart.ID,  false, IPageLayout.LEFT, 0.5f, editorArea);
+		layout.addStandaloneView(DetailsViewPart.ID,  false, IPageLayout.RIGHT, 0.5f, editorArea);
 		layout.getViewLayout(KarteikastenSystemViewPart.ID).setCloseable(false);
-		
-		IFolderLayout folder = layout.createFolder("details", IPageLayout.RIGHT, 0.5f, KarteikastenSystemViewPart.ID);
-		folder.addView(DetailsViewPart.ID);
-
 	}
 
 }

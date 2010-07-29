@@ -25,22 +25,20 @@ public class FachOeffnenHandler extends AbstractHandler implements IHandler {
 				.getApplicationContext();
 		IKarteikastenSystemResource resource = (IKarteikastenSystemResource) ctx
 				.getVariable(ResourceProvider.MODEL_RESOURCE_NAME);
-		Fach f = (Fach) ctx
-				.getVariable(ResourceProvider.FACH_NAME);
+		Fach f = (Fach) ctx.getVariable(ResourceProvider.FACH_NAME);
 
-		IWorkbenchPage page = HandlerUtil.getActiveWorkbenchWindow(event).getActivePage();
+		IWorkbenchPage page = HandlerUtil.getActiveWorkbenchWindow(event)
+				.getActivePage();
 
-		
-		
 		// Get the view
 		if (f != null) {
-				FachEditorInput input = new FachEditorInput(f);
-				try {
-					page.openEditor(input, FachEditor.ID);
+			FachEditorInput input = new FachEditorInput(f);
+			try {
+				page.openEditor(input, FachEditor.ID);
 
-				} catch (PartInitException e) {
-					System.out.println(e.getStackTrace());
-				}
+			} catch (PartInitException e) {
+				System.out.println(e.getStackTrace());
+			}
 		}
 		return null;
 	}

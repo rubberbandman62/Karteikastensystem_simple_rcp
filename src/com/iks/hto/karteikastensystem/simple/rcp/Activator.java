@@ -30,6 +30,8 @@ public class Activator extends AbstractUIPlugin implements ServiceListener {
 
 	private BundleContext context;
 
+	private IKarteikastenSystemResource resource;
+
 	/**
 	 * The constructor
 	 */
@@ -101,17 +103,22 @@ public class Activator extends AbstractUIPlugin implements ServiceListener {
 	 * @return the resource
 	 */
 	public IKarteikastenSystemResource loadResource(String uri) {
+		resource = null;
 		if (loadingService != null) {
-			return loadingService.findAndLoadResource(uri);
+			resource = loadingService.findAndLoadResource(uri);
 		} else {
 			getDefault().getLog().log(
 					new Status(IStatus.ERROR, Activator.PLUGIN_ID,
 							"Model loading service not available"));
 		}
 
-		return null;
+		return resource;
 	}
 
+	public IKarteikastenSystemResource getLastLoadedResource() {
+		return this.resource;
+	}
+	
 	@Override
 	public void serviceChanged(ServiceEvent event) {
 		ServiceReference sr = event.getServiceReference();

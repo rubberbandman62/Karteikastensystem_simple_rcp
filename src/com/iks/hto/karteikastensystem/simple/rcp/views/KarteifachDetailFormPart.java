@@ -1,8 +1,5 @@
 package com.iks.hto.karteikastensystem.simple.rcp.views;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Image;
@@ -15,8 +12,6 @@ import org.eclipse.ui.forms.widgets.Form;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import com.iks.hto.karteikastensystem.core.model.karteikastensystem.Fach;
-import com.iks.hto.karteikastensystem.core.model.karteikastensystem.Karteifachtyp;
-import com.iks.hto.karteikastensystem.core.model.karteikastensystem.Karteikasten;
 import com.iks.hto.karteikastensystem.simple.rcp.Activator;
 
 public class KarteifachDetailFormPart {

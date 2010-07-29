@@ -1,6 +1,5 @@
 package com.iks.hto.karteikastensystem.simple.rcp;
 
-import org.eclipse.ui.IFolderLayout;
 import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IPerspectiveFactory;
 

@@ -58,7 +58,7 @@
             name="neuer Karteikasten">
       </command>
       <command
-            defaultHandler="com.iks.hto.karteikastensystem.simple.rcp.handlers.KarteikastenLöschenHandler"
+            defaultHandler="com.iks.hto.karteikastensystem.simple.rcp.handlers.KarteikastenLoeschenHandler"
             id="com.iks.hto.karteikastensystem.simple.rcp.karteikastenLoeschen"
             name="Kateikasten löschen">
       </command>
